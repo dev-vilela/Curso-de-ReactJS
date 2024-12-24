@@ -1,4 +1,6 @@
-import React from "react";
+/*
+
+EXEMPLO DA AULA 34
 
 const Equipe = (props) =>{
   return (
@@ -43,6 +45,45 @@ function App(){
       <Equipe nome="Rafa" cargo="Designer" idade="19" Linkedin="https://www.linkedin.com/in/paulo-vilela-18126922b/"  />
 
       <Equipe nome="Wende Layra" cargo="Designer" idade="19" Linkedin="https://www.linkedin.com/in/paulo-vilela-18126922b/"  />
+    </div>
+  );
+}
+
+export default App;
+
+*/
+
+import React, { Component } from "react";
+
+class Equipe extends Component{
+  render(){
+    return(
+      <div>
+        <Sobre  nome={this.props.nome} cargo={this.props.cargo} idade={this.props.idade} />
+        <hr></hr>
+         </div>
+    );
+  }
+}
+
+class Sobre extends Component{
+  render(){
+    return(
+      <div>
+      <h2>Olá sou o {this.props.nome}</h2>
+      <h3>Cargo: {this.props.cargo}</h3>
+      <h3>idade: {this.props.idade} anos</h3>
+    </div>
+    );
+  }
+}
+
+function App(){
+  return(
+    <div>
+      <h1>Conheça nossa equipe:</h1>
+     <Equipe nome="Paulo" cargo="Desenvolvedor " idade="24"/>
+      
     </div>
   );
 }
