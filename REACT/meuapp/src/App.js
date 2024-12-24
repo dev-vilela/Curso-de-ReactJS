@@ -6,7 +6,7 @@ const Equipe = (props) =>{
         <Sobre nome={props.nome} cargo={props.cargo} 
         idade={props.idade} />
 
-        <Social/>
+        <Social ld={props.Linkedin} />
 
         <hr></hr>
     </div>
@@ -27,8 +27,8 @@ const Social = (props) =>{
  return(
   <div>
     <a>Github |</a>
-    <a>Linkedin |</a>
-    <a>YouTubbe </a>
+    <a href={props.ld}>Linkedin |</a>
+    <a> YouTubbe </a>
   </div>
  )
 }
@@ -39,7 +39,10 @@ function App(){
       <h1>Conheça nossa equipe:</h1>
 
       <Equipe nome="Paulo" cargo="Desenvolvedor" idade="22" Linkedin="https://www.linkedin.com/in/paulo-vilela-18126922b/"/>
-      <Equipe nome="Rafa" cargo="Designer" idade="19" />
+
+      <Equipe nome="Rafa" cargo="Designer" idade="19" Linkedin="https://www.linkedin.com/in/paulo-vilela-18126922b/"  />
+
+      <Equipe nome="Wende Layra" cargo="Designer" idade="19" Linkedin="https://www.linkedin.com/in/paulo-vilela-18126922b/"  />
     </div>
   );
 }
