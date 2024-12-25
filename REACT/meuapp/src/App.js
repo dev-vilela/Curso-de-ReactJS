@@ -147,9 +147,9 @@ class App extends Component{
 
 
 export default App;
-*/
 
-
+----------------------------SEÇÃO 5---------------------------------
+AULA 38
 import React, {Component} from 'react'
 
 class App extends Component{
@@ -183,6 +183,25 @@ class App extends Component{
     return(
       <div>
         <h1>Aula 38 {this.state.hora} </h1>
+      </div>
+    );
+  }
+}
+
+export default App;
+*/
+
+
+import React, {Component} from 'react';
+import Membro from './components/Membro';
+
+class App extends Component{
+
+
+  render(){
+    return(
+      <div>
+        <Membro nome="Visitante" />
       </div>
     );
   }
