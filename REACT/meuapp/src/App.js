@@ -90,7 +90,8 @@ function App(){
 
 export default App;
 
-*/
+---------------------------------
+AULA 37
 //TRABALHANDO COM STATE
 import React, {Component} from 'react';
 
@@ -144,6 +145,48 @@ class App extends Component{
   }
 }
 
+
+export default App;
+*/
+
+
+import React, {Component} from 'react'
+
+class App extends Component{
+
+    constructor(props){
+      super(props);
+      this.state = { 
+        hora:'00:00:00'
+      };
+    }
+
+    //
+    componentDidMount(){
+
+      setInterval(() =>{
+        this.setState({hora: new Date().toLocaleTimeString() })
+      }, 1000);
+
+    }
+
+    componentDidUpdate(){
+      console.log('Atualizou!')
+    }
+
+    //SE DEVE ATUALIZAR OU NÃO
+    // shouldComponentUpdate(){
+
+    // }
+
+  render(){
+    return(
+      <div>
+        <h1>Aula 38 {this.state.hora} </h1>
+      </div>
+    );
+  }
+}
 
 export default App;
 
