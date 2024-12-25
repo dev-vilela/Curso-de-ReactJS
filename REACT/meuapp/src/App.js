@@ -189,9 +189,8 @@ class App extends Component{
 }
 
 export default App;
-*/
-
-
+---------------------------------------------------------
+AULA 41:
 import React, {Component} from 'react';
 
 
@@ -230,6 +229,43 @@ class App extends Component{
             <button onClick={this.entrar} >Entrar no sistema</button>
           </div>
         }
+      </div>
+    );
+  }
+}
+
+export default App;
+
+*/
+
+
+import React, {Component} from 'react';
+import Feed from './aula42/Feed';
+
+class App extends Component{
+
+  constructor(props){
+    super(props);
+    this.state = {
+        feed:[
+          {id:1, username: "Paulo", curtidas:100, comentarios:2},
+          {id:2, username: "Wende", curtidas:200, comentarios:16},
+          {id:3, username: "Zayne", curtidas:500, comentarios:106},
+          {id:4, username: "Layla", curtidas:1, comentarios:0}
+        ]
+    };
+  }
+
+
+  render(){
+    return(
+      <div>
+          {this.state.feed.map((item) =>{
+            return(
+                <Feed id={item.id} username={item.username} 
+                curtidas={item.curtidas} comentarios={item.comentarios} />
+            );
+          })}
       </div>
     );
   }
